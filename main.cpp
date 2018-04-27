@@ -1,6 +1,3 @@
-// final alaa.cpp : Defines the entry point for the console application.
-//
-
 
 #include <bits/stdc++.h>
 #include <iostream>
@@ -30,7 +27,7 @@ int main()
 	cout << "please enter the size of your set :  ";
 	cin >> sizeOfset;
 	char alphabet[sizeOfset];
-//	char alphabet[3];
+
 	for (int i = 0; i<sizeOfset; i++) {
 		cout << i + 1 << ":";
 		cin >> alphabet[i];
@@ -64,11 +61,7 @@ string split(string s, int firstIndex, int secondIndex) { //function return stri
 	s.erase(0, 1);
 
 	s += decodeMessege[tag_index++];
-	/* for(int i=firstIndex;i<=secondIndex;i++){
-	splited+=s[i];
 
-	}
-	*/
 	return s;
 
 }
@@ -133,7 +126,6 @@ void decoding(char alphabet[], int sizeOfset) {
 	cout << "enter mess to be decoded" << endl;
 	cin >> decodeMessege;
 	tag_index = CalculateK(CalculateSmallestRange(arr, sizeOfset));
-	//sTag = split(decodeMessege, 0, CalculateK(CalculateSmallestRange(arr, sizeOfset)));
 	sTag = decodeMessege.substr(0, 6);
 	Tag = BinaryConverter(sTag);
 	cout << "how many elements do you want to decode  " << endl;
@@ -183,7 +175,6 @@ void encoding(char alphabet[], int sizeOfset) {
 
 
 	pair<double, double>arr[sizeOfset];
-	//pair<double, double>arr[3];
 	arr[0].first = 0;
 
 	for (int i = 0; i<sizeOfset; ++i) {
